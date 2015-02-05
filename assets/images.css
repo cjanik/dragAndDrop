@@ -1,0 +1,9 @@
+
+
+img {
+	cursor: move;
+}
+
+img.over {
+  border: 2px dashed #000;
+}

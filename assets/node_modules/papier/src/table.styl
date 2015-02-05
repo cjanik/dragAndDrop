@@ -1,0 +1,48 @@
+@require "config.styl";
+
+table {
+  border: 1px solid #eee;
+  margin: 0.25em 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  thead {
+    background: #eee;
+  }
+
+  th, td {
+    padding: 0.5em;
+    border-right: 1px solid #eee;
+  }
+
+  tr {
+    border-bottom: 1px solid #eee;
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  &.zebra > *, .zebra > * {
+    &:nth-child(even) {
+      background: #f9f9f9;
+    }
+    &:nth-child(odd) {
+      background: #fff;
+    }
+  }
+
+  &.hover > *, .hover > * {
+    transition: all 250ms;
+    &:hover {
+      background: lighten($light-blue, 90%);
+    }
+  }
+}
+
+@media screen and (min-width: 568px) {
+  table {
+    margin: 0.5em 0;
+  }
+}
